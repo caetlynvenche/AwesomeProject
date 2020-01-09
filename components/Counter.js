@@ -20,7 +20,7 @@ export default class Counter extends React.Component {
     const {color, size} = this.props
 
     return (
-      <View>
+      <View style={this.props.styles.border}>
         <Text style={{color, fontSize: size}}>
           {count}
         </Text>

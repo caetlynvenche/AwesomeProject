@@ -1,56 +1,26 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
-import Counter from './components/Counter';
+import { StyleSheet, Text, View } from 'react-native';
+import { createAppContainer } from 'react-navigation'
+import {createStackNavigator} from 'react-navigation-stack';
+import HomeScreen from './components/HomeScreen'
 
-// class Counter extends React.Component {
+const MainNavagator = createStackNavigator({
+  Home: {screen: HomeScreen}
+})
+//how do i pass down styles?
 
-//   state = {count: 0}
+// export default function App() {
 
-//   increaseCount = () => {
-//     this.setState({count: this.state.count + 1})
-//   }
-//   decreaseCount = () => {
-//     this.setState({count: this.state.count - 1})
-//   }
-//   clearCount = () => {
-//     this.setState({count: 0})
-//   }
+//   return (
+//     <View style={styles.container}>
+//       <HomeScreen styles={styles} />
 
-//   render() {
-//     const {count} = this.state
-//     const {color, size} = this.props
-
-//     return (
-//       <View>
-//         <Text style={{color, fontSize: size}}>
-//           {count}
-//         </Text>
-//         <Button
-//           onPress={this.increaseCount}
-//           title="+" />
-//         <Button
-//           onPress={this.decreaseCount}
-//           title="-" />
-//         <Button
-//           onPress={this.clearCount}
-//           title="Clear" />
-//       </View>
-//     )
-//   }
+//     </View>
+//   );
 // }
 
-export default function App() {
+const App = createAppContainer(MainNavagator);
 
-  return (
-    <View style={styles.container}>
-      <Text style={styles.headerstyle}>Caetlyn Says Hi!!!</Text>
-      <Text>I am working on React Native... finally--</Text>
-
-        <Counter color={'steelblue'} size={80} />
-
-    </View>
-  );
-}
 
 const styles = StyleSheet.create({
   container: {
@@ -64,4 +34,14 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: 'bold',
   },
+  border: {
+    borderWidth: 1,
+    borderColor: 'black',
+    borderStyle: 'solid',
+    width: '80%',
+    padding: 30,
+    margin: 20,
+  },
 });
+
+export default App
