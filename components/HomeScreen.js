@@ -1,8 +1,8 @@
 import React from 'react';
 import { Text, View, Button } from 'react-native'
-import Counter from './components/Counter';
+import Counter from './Counter';
 
-export default function HomeScreen(props) {
+const HomeScreen = (props) =>  {
     const home = () => {
         alert("home page alert")
     }
@@ -15,7 +15,9 @@ export default function HomeScreen(props) {
                 title="Home Page Button"
                 onPress={home} />
 
-            {/* <Counter color={'steelblue'} size={80} styles={styles}  /> */}
+            {/* <Counter color={'steelblue'} size={80} styles={props.styles}  /> */}
         </View>
     )
 }
+
+export default HomeScreen
