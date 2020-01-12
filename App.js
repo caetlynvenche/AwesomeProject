@@ -11,9 +11,10 @@ const App = () => {
 				<Text style={styles.boldBigText}>Header</Text>
 			</View>
 
-			{/* <NameAge styles={styles} /> */}
+			<NameAge styles={styles} />
 			{/* <HomeScreen styles={styles} /> */}
-			<List styles={styles} />
+			{/* <List styles={styles} /> */}
+
     	</View>
 	)
 }
