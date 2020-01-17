@@ -1,21 +1,28 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
+import { StyleSheet, Text, View, Button, TextInput, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import HomeScreen from './components/HomeScreen'
 import NameAge from './components/NameAge'
 import List from './components/List'
+import Sandbox from './components/Sandbox'
 
 const App = () => {
 	return (
-    	<View style={styles.container}>
-			<View style={styles.header}>
-				<Text style={styles.boldBigText}>Header</Text>
+		<TouchableWithoutFeedback onPress={() => {
+			Keyboard.dismiss()
+		}}>
+			<View style={styles.container}>
+				<View style={styles.header}>
+					<Text style={styles.boldBigText}>Header</Text>
+				</View>
+
+				<NameAge styles={styles} />
+				{/* <HomeScreen styles={styles} /> */}
+				{/* <List styles={styles} /> */}
+				{/* <Sandbox /> */}
+
 			</View>
-
-			<NameAge styles={styles} />
-			{/* <HomeScreen styles={styles} /> */}
-			{/* <List styles={styles} /> */}
-
-    	</View>
+		</TouchableWithoutFeedback>
+		
 	)
 }
 
@@ -64,7 +71,14 @@ const styles = StyleSheet.create({
 		padding: 30,
 		backgroundColor: 'lightgray',
 		fontSize: 24,
-	}
+	},
+	content: {
+		flex: 1,
+	},
+	list: {
+		flex: 1,
+		marginTop: 10,
+	},
 });
 
 export default App

@@ -30,7 +30,7 @@ const NameAge = (props) => {
 	}
     
     return (
-        <View>
+        <View style={props.styles.content}>
             <Text>Name: {name} Age: {age}</Text>
 
 			<Text>Enter Name:</Text>
@@ -51,16 +51,18 @@ const NameAge = (props) => {
 				title="Add Name"
 				onPress={handleAdd} />
 
-			<FlatList
-                // numColumns={2}
-                data={people}
-                renderItem={( {item} ) => (
-                    <TouchableOpacity
-                            onPress={() => handleDelete(item.id)}>
-                        <Text style={props.styles.items}>{item.name} {item.age} </Text>
-                    </TouchableOpacity>
-                )}
-                keyExtractor={(item) => item.id} />
+			<View style={props.styles.list}>
+				<FlatList
+					// numColumns={2}
+					data={people}
+					renderItem={( {item} ) => (
+						<TouchableOpacity
+								onPress={() => handleDelete(item.id)}>
+							<Text style={props.styles.items}>{item.name} {item.age} </Text>
+						</TouchableOpacity>
+					)}
+					keyExtractor={(item) => item.id} />
+				</View>
         </View>
     )
 }
