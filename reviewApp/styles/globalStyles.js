@@ -6,15 +6,17 @@ export const globalStyles = StyleSheet.create({
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
-        // padding: 20,
+        padding: 20,
     },
     titleText: {
         fontFamily: 'tangerine-bold',
-        fontSize: 30,
-        color: '#333'
+        fontSize: 50,
+        color: '#333',
     },
     paragraph: {
         marginVertical: 8,
         lineHeight: 20,
+        fontFamily: 'tangerine-bold',
+        fontSize: 30,
     },
 })
