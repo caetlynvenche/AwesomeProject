@@ -7,17 +7,17 @@ export default function Home({ navigation }){
         {
             title: 'One',
             body: 'lorem ipsum',
-            key: 1
+            key: '1'
         },
         {
             title: 'Two',
             body: 'lorem ipsum',
-            key: 2
+            key: '2'
         },
         {
             title: 'Three',
             body: 'lorem ipsum',
-            key: 3
+            key: '3'
         }
     ])
 

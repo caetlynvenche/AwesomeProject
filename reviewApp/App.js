@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 // import { StyleSheet, View } from 'react-native'
 import * as Font from 'expo-font'
 import { AppLoading } from 'expo'
-import Navigator from './routes/HomeStack'
+import Navigator from './routes/Drawer'
 
 const getFonts = () => Font.loadAsync({
     'tangerine-regular': require('./assets/fonts/Tangerine-Regular.ttf'),
