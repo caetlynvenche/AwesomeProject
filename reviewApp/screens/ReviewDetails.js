@@ -1,21 +1,33 @@
 import React from 'react'
-import { View, Text, Button } from 'react-native'
-import {globalStyles} from '../styles/globalStyles'
+import { View, Text, Button, Image, StyleSheet } from 'react-native'
+import {globalStyles, images} from '../styles/globalStyles'
+import Card from '../shared/card'
 
 
 export default function ReviewDetails({ navigation }){
-    // const pressHandler = () => {
-    //     navigation.goBack()
-    //     //pops a screen off the stack and goes back to home screen
-    // }
+    const rating = navigation.getParam('rating')
+
     return (
         <View style={globalStyles.container}>
+            <Card>
             <Text style={globalStyles.titleText}>{navigation.getParam('title')}</Text>
             <Text style={globalStyles.paragraph}>{navigation.getParam('body')}</Text>
-            {/* <Button 
-                title='Back to Home Screen'
-                onPress={pressHandler}
-            /> */}
+            <View style={styles.rating}>
+                <Text>GameZone Rating: </Text>
+                <Image source={images.ratings[rating]} />
+            </View>
+            </Card>
         </View> 
     )
 }
+
+const styles = StyleSheet.create({
+    rating: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        paddingTop: 16,
+        marginTop: 16,
+        borderTopWidth: 1,
+        borderTopColor: '#eee',
+    },
+})
