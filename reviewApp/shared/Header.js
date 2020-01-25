@@ -30,7 +30,7 @@ let width = Dimensions.get('window').width
 const styles = StyleSheet.create({
     header: {
         width: width,
-        height: 60,
+        height: 100,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
