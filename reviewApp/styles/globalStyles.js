@@ -19,6 +19,20 @@ export const globalStyles = StyleSheet.create({
         fontFamily: 'tangerine-bold',
         fontSize: 30,
     },
+    input: {
+        borderWidth: 1,
+        borderColor: '#ddd',
+        padding: 10,
+        fontSize: 18,
+        borderRadius: 6,
+    },
+    errorText: {
+        color: 'maroon',
+        fontWeight: 'bold',
+        marginBottom: 10,
+        marginTop: 6,
+        textAlign: 'center',
+    }
 })
 
 export const images = {
