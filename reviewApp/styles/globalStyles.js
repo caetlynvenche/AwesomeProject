@@ -18,6 +18,7 @@ export const globalStyles = StyleSheet.create({
         lineHeight: 20,
         fontFamily: 'tangerine-bold',
         fontSize: 30,
+        padding: 10,
     },
     input: {
         borderWidth: 1,
